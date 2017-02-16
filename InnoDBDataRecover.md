@@ -50,20 +50,20 @@
 
 10. 导入表空间文件
 
-```mysql
+   ```mysql
    ALTER TABLE tableName IMPORT TABLESPACE
-```
-
-   本项目可使用如下命令
-
-   ```
-   java -cp *.jar InnoDBRecoverTool --importTablespaces
    ```
 
-11. 设置MySQL配置文件
+   可使用本项目的如下命令
 
-```mysql
-   innodb_force_recovery=6
-```
+   ```shell
+   java -cp *.jar InnoDBRecoverTool --discardTablespaces
+   ```
+
+11.  设置MySQL配置文件
+
+    ```mysql
+    innodb_force_recovery=6
+    ```
 
 12. 重新启动MySQL并导出数据
